@@ -6,6 +6,7 @@ local colors = {
 }
 
 function colors.generate()
+  colors.none = "NONE"
   if vim.o.background == 'dark' then
     if conf.mirage then
       colors.accent = '#FFCC66'

@@ -10,6 +10,8 @@ end
 
 config = {
   mirage = opt('mirage', false),
+  commentStyle = opt('italic_comments', true) and 'italic' or 'NONE',
+  transparent = opt('transparent', false)
 }
 
 return config

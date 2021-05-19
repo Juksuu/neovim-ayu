@@ -24,9 +24,10 @@ local function set_terminal_colors()
 end
 
 local function set_groups()
+  local conf = require('ayu.config')
   local groups = {
     -- Base
-    Normal = {fg = colors.fg, bg = colors.bg},
+    Normal = {fg = colors.fg, bg = conf.transparent and colors.none or colors.bg},
     ColorColumn = {bg = colors.line},
     CursorColumn = {bg = colors.line},
     CursorLine = {bg = colors.line},
@@ -38,7 +39,7 @@ local function set_groups()
     VertSplit = {fg = colors.panel_border, bg = colors.bg},
     Folded = {fg = colors.fg_idle, bg = colors.panel_bg},
     FoldColumn = {bg = colors.bg},
-    SignColumn = {bg = colors.bg},
+    SignColumn = {bg = conf.transparent and colors.none or colors.bg},
 
     MatchParen = {style = 'underline'},
     ModeMsg = {fg = colors.string},
@@ -64,7 +65,7 @@ local function set_groups()
     Visual = {bg = colors.selection_inactive},
     WarningMsg = {fg = colors.warning},
 
-    Comment = {fg = colors.comment},
+    Comment = {fg = colors.comment, style = conf.commentStyle},
     Constant = {fg = colors.constant},
     String = {fg = colors.string},
     Identifier = {fg = colors.entity},

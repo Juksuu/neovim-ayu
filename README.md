@@ -41,3 +41,10 @@ vim.g.ayu_overrides = {
 ```
 
 Use `:lua print(vim.inspect(require('ayu.colors')))` command to check all available colors.
+
+
+| Option                |  Default  | Description                                                    |
+|-----------------------|-----------|----------------------------------------------------------------|
+| ayu_mirage            |  `false`  | The theme comes with a second dark color option `mirage`.      |
+| ayu_italic_comments   |  `false`  | Make comments italic                                           |
+| ayu_transparent       |  `false`  | Enable this to get transparent background                      |
