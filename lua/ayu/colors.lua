@@ -1,3 +1,5 @@
+local conf = require('ayu.config');
+
 local colors = {
   white = '#FFFFFF',
   black = '#000000'
@@ -5,7 +7,7 @@ local colors = {
 
 function colors.generate()
   if vim.o.background == 'dark' then
-    if vim.g.ayu_mirage then
+    if conf.mirage then
       colors.accent = '#FFCC66'
       colors.bg = '#1F2430'
       colors.fg = '#CBCCC6'
